@@ -1,5 +1,5 @@
 # Waveshare-LCD-1.8-CPP
-C++ Code for sending data to a Waveshare 1.8 inch LCD. Mostly just rewritten from the official Python-Pico implementation you can find under "Demo Codes" [here](https://www.waveshare.com/wiki/Pico-LCD-1.8#C_examples).
+C++ Code for sending data to a Waveshare 1.8 inch LCD. Mostly just rewritten from the official Python-Pico implementation you can find under "Demo Codes" [here](https://www.waveshare.com/wiki/Pico-LCD-1.8).
 
 # Setup
 This library uses [C-Periphery](https://github.com/vsergeev/c-periphery) for GPIO and SPI functionality. Make sure you clone it and include it into the compilation correctly.
