@@ -243,16 +243,11 @@ public:
 	}
 
 	void spiTransferColor(Color color) {
-		//printf("%d, %d, %d\n", color.r, color.g, color.b);
-		int rgb565 = color.to565();
-		//printf(" %d\n", rgb565);
-		byte left = (rgb565 >> 8) & 0xFF;
-		byte right = rgb565 & 0xFF;
+		int rgb565 = color.to565();        // RGB505: RRRRRGGGGGGBBBBB
+		byte left = (rgb565 >> 8) & 0xFF;  // Left:   RRRRRGGG
+		byte right = rgb565 & 0xFF;        // Right:  GGGBBBBB
 		spiTransferByte(left);
 		spiTransferByte(right);
-
-		//spiTransferByte(0b00000111);
-		//spiTransferByte(0b11100000);
 	}
 
 	void spiWriteBuffer(Framebuffer fb) {
