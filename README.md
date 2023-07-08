@@ -3,6 +3,7 @@ C++ Code for sending data to a Waveshare 1.8 inch LCD. Mostly just rewritten fro
 
 # Setup
 This library uses [C-Periphery](https://github.com/vsergeev/c-periphery) for GPIO and SPI functionality. Make sure you clone it and include it into the compilation correctly.
+You should also change the PIN declarations at the top of the header file. Setting a pin to 15 for example, means that the signal will be outputted to GPIO-15.
 
 # Usage
 ```C++
@@ -12,7 +13,8 @@ Framebuffer* fb = new Framebuffer();
 // Set pixel at 50/50 to red (1.0, 0.0, 0.0, alpha=1.0)
 fb.setPixel(50, 50, Color(1, 0, 0));
 
-// Send
+// Send data
+lcd.show(fb);
 ```
 
 # Getting rid of Color and Framebuffer
